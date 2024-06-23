@@ -2,32 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.homepage {
+  max-width: 1920px;
+  margin: auto;
+}
+
+nav {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.intro_img {
+  opacity: 0;
+  animation: opec 4s ease forwards;
+}
+
+.intro_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+details {
+  transition: all 0.5s;
+}
+
+.socials_quote_section .socials svg {
+  font-size: 4rem;
+}
+
+.socials_quote_section .socials .social {
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+}
+
+.socials_quote_section .socials .social:hover {
+  cursor: pointer;
+  color: gold;
+  scale: 1.1;
+  transition: all 0.3s;
+}
+
+.quote {
+  opacity: 0;
+}
+
+.projects_section .project_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.skills_section .skill {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem lightgray,
+    inset 0.1rem 0.1rem 0.5rem lightgray;
+}
+
+.skills_section .skills svg {
+  font-size: 5rem;
+}
+
+.skill,
+.skills_title {
+  opacity: 0;
+}
+.moveupAnimate {
+  animation: moveUp 1s ease forwards;
+}
+.moveupQuote {
+  animation: moveUpQuote 1s ease forwards;
+}
+.moveupSlowAnimate {
+  animation: moveUpSlow 1s ease forwards;
+}
+.moveRightAnimate {
+  animation: moveRight 1s forwards;
+}
+@keyframes opec {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(10rem);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUpQuote {
+  from {
+    transform: translateY(5rem);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveUpSlow {
+  from {
+    transform: translateY(5rem);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-20rem);
+  }
+
+  to {
+    opacity: 1;
   }
 }
