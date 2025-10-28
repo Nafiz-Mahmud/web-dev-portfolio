@@ -5,7 +5,7 @@ export default function Nav() {
       style={{ borderBottom: ".1rem solid blue" }}
     >
       <h1 className="ml-[5%] opacity-0 moveupAnimate">
-        Nafiz M. ID : {process.env.NEXT_PUBLIC_GA_ID}
+        Nafiz M. G - ID : {process.env.NEXT_PUBLIC_GA_ID}
       </h1>
     </nav>
   );
