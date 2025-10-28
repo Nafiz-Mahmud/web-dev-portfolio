@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Nafiz M. | Web Dev",
   description: "Portfolio Site For Web Dev Nafiz Mahmud",
 };
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
 export default function RootLayout({
   children,
@@ -21,6 +24,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
