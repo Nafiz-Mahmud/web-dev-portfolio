@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Portfolio Site For Web Dev Nafiz Mahmud",
 };
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-TVPCK1PENB";
 
 export default function RootLayout({
   children,
